@@ -1,3 +1,6 @@
 {
-  "extends": "formidable/configurations/es6-node"
+  "extends": "formidable/configurations/es6-node",
+  "env": {
+    "jest": true
+  }
 }
