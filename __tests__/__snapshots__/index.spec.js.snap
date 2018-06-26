@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`formidadog-ql server executes the dog query 1`] = `
+Object {
+  "data": Object {
+    "dog": Object {
+      "breed": "Pit Mix",
+      "name": "Dixie",
+    },
+  },
+}
+`;
+
 exports[`formidadog-ql server executes the dogs query 1`] = `
 Object {
   "data": Object {
@@ -140,6 +151,26 @@ Object {
         "name": "Boone",
       },
     ],
+  },
+}
+`;
+
+exports[`formidadog-ql server executes the likeAllDogs mutation 1`] = `
+Object {
+  "errors": Array [
+    [GraphQLError: Cannot query field "dogs" on type "Mutation".],
+  ],
+}
+`;
+
+exports[`formidadog-ql server executes the likeDog mutation 1`] = `
+Object {
+  "data": Object {
+    "likeDog": Object {
+      "breed": "Pit Mix",
+      "likes": 1,
+      "name": "Dixie",
+    },
   },
 }
 `;

@@ -39,4 +39,72 @@ describe("formidadog-ql server", () => {
 
     expect(result).toMatchSnapshot();
   });
+
+  it("executes the dog query", async () => {
+    const query = `
+      query dog($key: ID!) {
+        dog(key: $key) {
+          breed
+          name
+        }
+      }
+    `;
+
+    const result = await graphql(
+      schema(dogs),
+      query,
+      undefined,
+      undefined,
+      {
+        key: "VmeRTX7j-"
+      }
+    );
+
+    expect(result).toMatchSnapshot();
+    expect(result.data.dog.name).toEqual("Dixie");
+  });
+
+  it("executes the likeDog mutation", async () => {
+    const mutation = `
+      mutation likeDog($key: ID!) {
+        likeDog(key: $key) {
+          name
+          breed
+          likes
+        }
+      }
+    `;
+
+    const result = await graphql(
+      schema(dogs),
+      mutation,
+      undefined,
+      undefined,
+      {
+        key: "VmeRTX7j-"
+      }
+    );
+
+    expect(result).toMatchSnapshot();
+    expect(result.data.likeDog.likes).toEqual(1);
+  });
+
+  it("executes the likeAllDogs mutation", async () => {
+    const mutation = `
+      mutation likeAllDogs {
+        dogs {
+          name
+          breed
+          likes
+        }
+      }
+    `;
+
+    const result = await graphql(
+      schema(dogs),
+      mutation
+    );
+
+    expect(result).toMatchSnapshot();
+  });
 });
