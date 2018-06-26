@@ -25,7 +25,7 @@ const typeDefs = `
 const resolvers = (dogs) => ({
   Query: {
     dogs: (root, args, context) => dogs,
-    dog: (roots, args, context) => dogs.find((a) => a.key === args.key)
+    dog: (root, args, context) => dogs.find((a) => a.key === args.key)
   },
   Mutation: {
     likeDog: (root, args, context) => {

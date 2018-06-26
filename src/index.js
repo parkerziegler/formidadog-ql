@@ -1,3 +1,5 @@
+"use strict";
+
 const graphqlHttp = require("express-graphql");
 const express = require("express");
 const app = express();
@@ -33,6 +35,7 @@ const start = async () => {
   app.use(initializedGraphQLMiddleware);
 
   app.listen(PORT, () => {
+    // eslint-disable-next-line no-console
     console.log(`Server running at http://localhost:${PORT}`);
   });
 };
