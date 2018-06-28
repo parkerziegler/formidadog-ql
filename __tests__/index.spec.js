@@ -92,9 +92,7 @@ describe("formidadog-ql server", () => {
   it("executes the likeAllDogs mutation", async () => {
     const mutation = `
       mutation likeAllDogs {
-        dogs {
-          name
-          breed
+        likeAllDogs {
           likes
         }
       }
@@ -106,5 +104,6 @@ describe("formidadog-ql server", () => {
     );
 
     expect(result).toMatchSnapshot();
+    expect(result.data.likeAllDogs.every((dog) => dog.likes > 0)).toBe(true);
   });
 });

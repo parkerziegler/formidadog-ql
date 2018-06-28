@@ -157,9 +157,55 @@ Object {
 
 exports[`formidadog-ql server executes the likeAllDogs mutation 1`] = `
 Object {
-  "errors": Array [
-    [GraphQLError: Cannot query field "dogs" on type "Mutation".],
-  ],
+  "data": Object {
+    "likeAllDogs": Array [
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 2,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+    ],
+  },
 }
 `;
 
