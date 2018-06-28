@@ -17,7 +17,7 @@ const start = async () => {
 
   app.use(cors());
 
-  const { schema, context } = require("./schema");
+  const { schema } = require("./schema");
 
   const PORT = 3001;
 
@@ -27,9 +27,7 @@ const start = async () => {
     // Pretty Print the JSON response
     pretty: true,
     // Enable GraphiQL dev tool
-    graphiql: true,
-    // A function that returns extra data available to every resolver
-    context
+    graphiql: true
   });
 
   app.use(initializedGraphQLMiddleware);
