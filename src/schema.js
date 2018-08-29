@@ -12,24 +12,24 @@ const typeDefs = `
     likeAllDogs: [Dog]
   }
   type Dog {
-    key: String
-    name: String
-    breed: String
-    color: String
-    imageUrl: String
-    description: String
-    likes: Int
+    key: String!
+    name: String!
+    breed: String!
+    color: String!
+    imageUrl: String!
+    description: String!
+    likes: Int!
   }
 `;
 
-const resolvers = (dogs) => ({
+const resolvers = dogs => ({
   Query: {
-    dogs: (root, args) => dogs,
-    dog: (root, args) => dogs.find((a) => a.key === args.key)
+    dogs: () => dogs,
+    dog: (root, args) => dogs.find(a => a.key === args.key)
   },
   Mutation: {
     likeDog: (root, args) => {
-      const dog = dogs.find((a) => a.key === args.key);
+      const dog = dogs.find(a => a.key === args.key);
       const idx = dogs.indexOf(dog);
       const liked = {
         ...dog,
@@ -38,8 +38,8 @@ const resolvers = (dogs) => ({
       dogs.splice(idx, 1, liked);
       return liked;
     },
-    likeAllDogs: (root, args) => {
-      dogs.forEach((dog) => {
+    likeAllDogs: () => {
+      dogs.forEach(dog => {
         dog.likes += 1;
       });
       return dogs;
@@ -48,8 +48,9 @@ const resolvers = (dogs) => ({
 });
 
 module.exports = {
-  schema: (dogs) => makeExecutableSchema({
-    typeDefs,
-    resolvers: resolvers(dogs)
-  })
+  schema: dogs =>
+    makeExecutableSchema({
+      typeDefs,
+      resolvers: resolvers(dogs)
+    })
 };
