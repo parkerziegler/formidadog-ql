@@ -10,7 +10,8 @@
     "lint": "eslint 'src/**/*.js' --fix",
     "test": "jest",
     "coverage": "jest --coverage",
-    "prod": "NODE_ENV=production node src/index.js"
+    "prod": "NODE_ENV=production node src/index.js",
+    "now-start": "yarn prod"
   },
   "dependencies": {
     "cors": "^2.8.4",
@@ -33,5 +34,17 @@
     "eslint-plugin-promise": "^3.8.0",
     "jest": "^23.1.0",
     "prettier": "^1.14.2"
-  }
+  },
+  "files": [
+    "./src/*.js",
+    "yarn.lock",
+    "LICENSE.txt",
+    "README.md"
+  ],
+  "now.files": [
+    "./src/*.js",
+    "yarn.lock",
+    "LICENSE.txt",
+    "README.md"
+  ]
 }
