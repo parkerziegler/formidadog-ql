@@ -9,11 +9,15 @@ require("es6-promise").polyfill();
 
 const start = async () => {
   // make the req to RawGit for Formidable dogs
-  const res = await fetch("https://rawgit.com/FormidableLabs/dogs/master/dogs.json");
+  const res = await fetch(
+    "https://rawgit.com/FormidableLabs/dogs/master/dogs.json"
+  );
 
   const data = await res.json();
-  const dogs = data.map((dog) => ({ ...dog,
-    likes: 0 }));
+  const dogs = data.map(dog => ({
+    ...dog,
+    likes: 0
+  }));
 
   app.use(cors());
 
