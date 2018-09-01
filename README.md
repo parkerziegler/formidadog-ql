@@ -1,5 +1,5 @@
 # 🐶 formidadog-ql 🐶
-A dead simple GraphQL API of 🐶 [@FormidableLabs](https://github.com/FormidableLabs).
+A dead simple GraphQL API of 🐶 [@FormidableLabs](https://github.com/FormidableLabs). See the demo [here](https://formidadog-ql.now.sh/graphql).
 
 [![Build Status](https://travis-ci.org/parkerziegler/formidadog-ql.svg?branch=master)](https://travis-ci.org/parkerziegler/formidadog-ql)
 [![Coverage Status](https://coveralls.io/repos/github/parkerziegler/formidadog-ql/badge.svg?branch=master)](https://coveralls.io/github/parkerziegler/formidadog-ql?branch=master)
