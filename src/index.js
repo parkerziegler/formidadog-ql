@@ -5,6 +5,7 @@ const express = require("express");
 const app = express();
 const cors = require("cors");
 const fetch = require("isomorphic-fetch");
+const { schema } = require("./schema");
 require("es6-promise").polyfill();
 
 const start = async () => {
@@ -16,12 +17,13 @@ const start = async () => {
   const data = await res.json();
   const dogs = data.map(dog => ({
     ...dog,
-    likes: 0
+    likes: 0,
+    pats: 0,
+    treats: 0,
+    bellyscratches: 0
   }));
 
   app.use(cors());
-
-  const { schema } = require("./schema");
 
   const PORT = 3001;
 

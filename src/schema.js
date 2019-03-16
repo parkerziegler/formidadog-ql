@@ -1,15 +1,22 @@
 "use strict";
 
 const { makeExecutableSchema } = require("graphql-tools");
+const { incrementDogAttribute, incrementAll } = require("./helpers");
 
 const typeDefs = `
   type Query {
-    dogs: [Dog]
-    dog(key: ID!): Dog
+    dogs: [Dog!]
+    dog(key: ID!): Dog!
   }
   type Mutation {
-    likeDog(key: ID!): Dog
-    likeAllDogs: [Dog]
+    likeDog(key: ID!): Dog!
+    likeAllDogs: [Dog!]
+    patDog(key: ID!): Dog!
+    patAllDogs: [Dog!]
+    treatDog(key: ID!): Dog!
+    treatAllDogs: [Dog!]
+    bellyscratchDog(key: ID!): Dog!
+    bellyscratchAllDogs: [Dog!]
   }
   type Dog {
     key: String!
@@ -19,31 +26,27 @@ const typeDefs = `
     imageUrl: String!
     description: String!
     likes: Int!
+    pats: Int!
+    treats: Int!
+    bellyscratches: Int!
   }
 `;
 
 const resolvers = dogs => ({
   Query: {
     dogs: () => dogs,
-    dog: (root, args) => dogs.find(a => a.key === args.key)
+    dog: (_, args) => dogs.find(a => a.key === args.key)
   },
   Mutation: {
-    likeDog: (root, args) => {
-      const dog = dogs.find(a => a.key === args.key);
-      const idx = dogs.indexOf(dog);
-      const liked = {
-        ...dog,
-        likes: dog.likes + 1
-      };
-      dogs.splice(idx, 1, liked);
-      return liked;
-    },
-    likeAllDogs: () => {
-      dogs.forEach(dog => {
-        dog.likes += 1;
-      });
-      return dogs;
-    }
+    likeDog: (_, args) => incrementDogAttribute("likes", args, dogs),
+    likeAllDogs: () => incrementAll("likes", dogs),
+    patDog: (_, args) => incrementDogAttribute("pats", args, dogs),
+    patAllDogs: () => incrementAll("pats", dogs),
+    treatDog: (_, args) => incrementDogAttribute("treats", args, dogs),
+    treatAllDogs: () => incrementAll("treats", dogs),
+    bellyscratchDog: (_, args) =>
+      incrementDogAttribute("bellyscratches", args, dogs),
+    bellyscratchAllDogs: () => incrementAll("bellyscratches", dogs)
   }
 });
 

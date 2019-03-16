@@ -1,5 +1,96 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`formidadog-ql server executes the bellyscratchAllDogs mutation 1`] = `
+Object {
+  "data": Object {
+    "bellyscratchAllDogs": Array [
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 2,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`formidadog-ql server executes the bellyscratchDog mutation 1`] = `
+Object {
+  "data": Object {
+    "bellyscratchDog": Object {
+      "bellyscratches": 1,
+    },
+  },
+}
+`;
+
 exports[`formidadog-ql server executes the dog query 1`] = `
 Object {
   "data": Object {
@@ -150,6 +241,87 @@ Object {
         "likes": 0,
         "name": "Boone",
       },
+      Object {
+        "breed": "Lab Dane Mix",
+        "color": "Yellow",
+        "description": "He is big. He is loveable. He is goofy. Most of all--he is Zeus.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/zeus.jpg",
+        "key": "jar_6493st",
+        "likes": 0,
+        "name": "Zeus",
+      },
+      Object {
+        "breed": "Boston Terrier",
+        "color": "Black & White",
+        "description": "Aggresive kisser and spoiled lap dog.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/daisy.jpg",
+        "key": "3TAkEh&n",
+        "likes": 0,
+        "name": "Daisy",
+      },
+      Object {
+        "breed": "French Bulldog mix",
+        "color": "Black & White",
+        "description": "Snorts like a pig, but sophisticated like a peacock.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/penelope.jpg",
+        "key": "S_eu6vPq",
+        "likes": 0,
+        "name": "Penelope",
+      },
+      Object {
+        "breed": "Beagle",
+        "color": "Tri-color",
+        "description": "Cassie has crossed the rainbow bridge.  She was loyal, fat, and always hungry, like her owner.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/cassie.jpg",
+        "key": "jar_6492ux",
+        "likes": 0,
+        "name": "Cassie",
+      },
+      Object {
+        "breed": "Beagle",
+        "color": "Tri-color",
+        "description": "Loves to play and sleep.  Still a puppy after 14 years.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/elliemae.jpg",
+        "key": "jar_8re3qux",
+        "likes": 0,
+        "name": "Ellie Mae",
+      },
+      Object {
+        "breed": "Beagle",
+        "color": "Tri-color",
+        "description": "Mischevious food and dirty diaper bandit.  Survivor of anal-gland carcinoma (srsly).",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/annie.jpg",
+        "key": "bar_9uie1278",
+        "likes": 0,
+        "name": "Annie",
+      },
+      Object {
+        "breed": "Lab/Husky/Springer Spaniel/Cocker Spaniel Mix",
+        "color": "Yellow",
+        "description": "As lovable as he is strange! Inseparable from his brother Charlie and his people! Chases shadows and stares at corners for hours! Fiercely loyal and master snuggle haver! Allergic to everything! Confused by his own farts!",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/odie.jpg",
+        "key": "ngk_4kmk6",
+        "likes": 0,
+        "name": "Odie",
+      },
+      Object {
+        "breed": "Half Rat Terrier, Half Mutt",
+        "color": "Yellow",
+        "description": "An unstoppable bundle of joy and friendship! Loves his friends in the Seattle office. Tolerates his brother's incessant ear chewing. Wags could power a wind turbine. The happiest little skunk you'll ever meet!",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/charlie.jpg",
+        "key": "l5hf_j34j",
+        "likes": 0,
+        "name": "Charlie",
+      },
+      Object {
+        "breed": "Cotralian",
+        "color": "Red",
+        "description": "Half Mini Australian Shepard, half Cocker Spaniel. Enjoys ball, sunshine naps, and stealing his owners' socks. Living the good life in Phoenix, Arizona.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/fred.jpg",
+        "key": "bnf_13kj",
+        "likes": 0,
+        "name": "Fred 'Baby' Diamond",
+      },
     ],
   },
 }
@@ -204,6 +376,33 @@ Object {
       Object {
         "likes": 1,
       },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
     ],
   },
 }
@@ -213,9 +412,189 @@ exports[`formidadog-ql server executes the likeDog mutation 1`] = `
 Object {
   "data": Object {
     "likeDog": Object {
-      "breed": "Pit Mix",
       "likes": 1,
-      "name": "Dixie",
+    },
+  },
+}
+`;
+
+exports[`formidadog-ql server executes the patAllDogs mutation 1`] = `
+Object {
+  "data": Object {
+    "patAllDogs": Array [
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 2,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`formidadog-ql server executes the patDog mutation 1`] = `
+Object {
+  "data": Object {
+    "patDog": Object {
+      "pats": 1,
+    },
+  },
+}
+`;
+
+exports[`formidadog-ql server executes the treatAllDogs mutation 1`] = `
+Object {
+  "data": Object {
+    "treatAllDogs": Array [
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 2,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+    ],
+  },
+}
+`;
+
+exports[`formidadog-ql server executes the treatDog mutation 1`] = `
+Object {
+  "data": Object {
+    "treatDog": Object {
+      "treats": 1,
     },
   },
 }
