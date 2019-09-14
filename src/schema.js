@@ -5,19 +5,21 @@ const { incrementDogAttribute, incrementAll } = require("./helpers");
 
 const typeDefs = `
   type Query {
-    dogs: [Dog!]
+    dogs: [Dog!]!
     dog(key: ID!): Dog!
   }
+
   type Mutation {
     likeDog(key: ID!): Dog!
-    likeAllDogs: [Dog!]
+    likeAllDogs: [Dog!]!
     patDog(key: ID!): Dog!
-    patAllDogs: [Dog!]
+    patAllDogs: [Dog!]!
     treatDog(key: ID!): Dog!
-    treatAllDogs: [Dog!]
+    treatAllDogs: [Dog!]!
     bellyscratchDog(key: ID!): Dog!
-    bellyscratchAllDogs: [Dog!]
+    bellyscratchAllDogs: [Dog!]!
   }
+  
   type Dog {
     key: String!
     name: String!

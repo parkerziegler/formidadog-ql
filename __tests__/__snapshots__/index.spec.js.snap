@@ -76,6 +76,21 @@ Object {
       Object {
         "bellyscratches": 1,
       },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
     ],
   },
 }
@@ -322,6 +337,51 @@ Object {
         "likes": 0,
         "name": "Fred 'Baby' Diamond",
       },
+      Object {
+        "breed": "Braque Francais Pyrenees",
+        "color": "White",
+        "description": "Born January 23, 2019, our sweet and friendly 9 week old puppy will grow into a  medium-sized dog with a soft, shorthaired coat with a gentle and family friendly character. He was bred to hunt the very rugged and arid Pyrenees Mountain range on the border of France and Spain. We look forward to many years of outdoor adventures with our new best friend.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/baker.jpg",
+        "key": "kr_32619",
+        "likes": 0,
+        "name": "Baker",
+      },
+      Object {
+        "breed": "Yorkie",
+        "color": "Tan",
+        "description": "This sweet little boy is extremely loving and loves to get belly rubs. He's super quiet and ninja like unless he's meeting another dog for the first time. Loves to hoard toys and hide them.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/milo_cesar.jpg",
+        "key": "lcn3_t8h1",
+        "likes": 0,
+        "name": "Milo",
+      },
+      Object {
+        "breed": "Yorkie mixed",
+        "color": "Black",
+        "description": "He's very sweet and overprotective of his humans but friendly once he knows you. He can only eat certain foods but loves his treats, swimming, and chewing on toys. He gets around extremely well on three legs.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/madden.jpg",
+        "key": "ujm_n5g8aL",
+        "likes": 0,
+        "name": "Madden",
+      },
+      Object {
+        "breed": "Golden Retriever",
+        "color": "Yellow",
+        "description": "Winnie is a rambunctious, energetic, and loving golden retriever.  Her favorite past times are playing fetch (her absolute favorite activity), napping, or swimming in the Chesapeake Bay.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/winnie.jpg",
+        "key": "ldg83_o8n4",
+        "likes": 0,
+        "name": "Winnie",
+      },
+      Object {
+        "breed": "Black Mouth Cur",
+        "color": "Brown and Black",
+        "description": "Islay is named for a beautiful island in Scotland, her name is pronounced Eye-lah. She is a very high energy girl who loves to hunt squirrels, rabbits, and mice. On occasion she even catches one. She is obsessed with any and all food and may have already swiped your lunch off of your desk.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/islay.jpg",
+        "key": "isl15_ks84",
+        "likes": 0,
+        "name": "Islay",
+      },
     ],
   },
 }
@@ -339,6 +399,21 @@ Object {
       },
       Object {
         "likes": 2,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
       },
       Object {
         "likes": 1,
@@ -494,6 +569,21 @@ Object {
       Object {
         "pats": 1,
       },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
     ],
   },
 }
@@ -521,6 +611,21 @@ Object {
       },
       Object {
         "treats": 2,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
       },
       Object {
         "treats": 1,
