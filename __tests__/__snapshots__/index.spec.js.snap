@@ -91,6 +91,12 @@ Object {
       Object {
         "bellyscratches": 1,
       },
+      Object {
+        "bellyscratches": 1,
+      },
+      Object {
+        "bellyscratches": 1,
+      },
     ],
   },
 }
@@ -382,6 +388,24 @@ Object {
         "likes": 0,
         "name": "Islay",
       },
+      Object {
+        "breed": "Toxirn",
+        "color": "Brown",
+        "description": "Juno is a spunky little lady who loves her toys and cuddles on the couch.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/juno.jpg",
+        "key": "jun0_5hbgm",
+        "likes": 0,
+        "name": "Juno",
+      },
+      Object {
+        "breed": "Miniature Australian Shepherd",
+        "color": "Black, Brown, and White",
+        "description": "Reyn is a sweet and shy girl who loves her treats and walks with her sister.",
+        "imageUrl": "https://raw.githubusercontent.com/FormidableLabs/dogs/master/reyn.jpg",
+        "key": "r3yn_5scmm",
+        "likes": 0,
+        "name": "Reyn",
+      },
     ],
   },
 }
@@ -399,6 +423,12 @@ Object {
       },
       Object {
         "likes": 2,
+      },
+      Object {
+        "likes": 1,
+      },
+      Object {
+        "likes": 1,
       },
       Object {
         "likes": 1,
@@ -584,6 +614,12 @@ Object {
       Object {
         "pats": 1,
       },
+      Object {
+        "pats": 1,
+      },
+      Object {
+        "pats": 1,
+      },
     ],
   },
 }
@@ -611,6 +647,12 @@ Object {
       },
       Object {
         "treats": 2,
+      },
+      Object {
+        "treats": 1,
+      },
+      Object {
+        "treats": 1,
       },
       Object {
         "treats": 1,

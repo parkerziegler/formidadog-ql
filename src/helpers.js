@@ -9,7 +9,7 @@
  * @returns {object} - the updated record created by the mutation.
  */
 const incrementDogAttribute = function(attr, args, dogs) {
-  const dog = dogs.find(a => a.key === args.key);
+  const dog = dogs.find(d => d.key === args.key || d.name === args.name);
   const idx = dogs.indexOf(dog);
 
   const update = {

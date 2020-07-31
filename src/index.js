@@ -15,12 +15,12 @@ const start = async () => {
   );
 
   const data = await res.json();
-  const dogs = data.map(dog => ({
+  const dogs = data.map((dog) => ({
     ...dog,
     likes: 0,
     pats: 0,
     treats: 0,
-    bellyscratches: 0
+    bellyscratches: 0,
   }));
 
   app.use(cors());
@@ -33,7 +33,7 @@ const start = async () => {
     // Pretty Print the JSON response
     pretty: true,
     // Enable GraphiQL dev tool
-    graphiql: true
+    graphiql: true,
   });
 
   app.use(initializedGraphQLMiddleware);

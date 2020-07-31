@@ -10,13 +10,13 @@ const typeDefs = `
   }
 
   type Mutation {
-    likeDog(key: ID!): Dog!
+    likeDog(key: ID!, name: String): Dog!
     likeAllDogs: [Dog!]!
-    patDog(key: ID!): Dog!
+    patDog(key: ID!, name: String): Dog!
     patAllDogs: [Dog!]!
-    treatDog(key: ID!): Dog!
+    treatDog(key: ID!, name: String): Dog!
     treatAllDogs: [Dog!]!
-    bellyscratchDog(key: ID!): Dog!
+    bellyscratchDog(key: ID!, name: String): Dog!
     bellyscratchAllDogs: [Dog!]!
   }
   
@@ -34,10 +34,11 @@ const typeDefs = `
   }
 `;
 
-const resolvers = dogs => ({
+const resolvers = (dogs) => ({
   Query: {
     dogs: () => dogs,
-    dog: (_, args) => dogs.find(a => a.key === args.key)
+    dog: (_, args) =>
+      dogs.find((d) => d.key === args.key || d.name === args.name),
   },
   Mutation: {
     likeDog: (_, args) => incrementDogAttribute("likes", args, dogs),
@@ -48,14 +49,14 @@ const resolvers = dogs => ({
     treatAllDogs: () => incrementAll("treats", dogs),
     bellyscratchDog: (_, args) =>
       incrementDogAttribute("bellyscratches", args, dogs),
-    bellyscratchAllDogs: () => incrementAll("bellyscratches", dogs)
-  }
+    bellyscratchAllDogs: () => incrementAll("bellyscratches", dogs),
+  },
 });
 
 module.exports = {
-  schema: dogs =>
+  schema: (dogs) =>
     makeExecutableSchema({
       typeDefs,
-      resolvers: resolvers(dogs)
-    })
+      resolvers: resolvers(dogs),
+    }),
 };

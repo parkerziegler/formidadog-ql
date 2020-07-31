@@ -17,12 +17,12 @@ describe("formidadog-ql server", () => {
       "https://rawgit.com/FormidableLabs/dogs/master/dogs.json"
     );
     const data = await res.json();
-    dogs = data.map(dog => ({
+    dogs = data.map((dog) => ({
       ...dog,
       likes: 0,
       pats: 0,
       treats: 0,
-      bellyscratches: 0
+      bellyscratches: 0,
     }));
   });
 
@@ -56,7 +56,7 @@ describe("formidadog-ql server", () => {
     `;
 
     const result = await graphql(schema(dogs), query, undefined, undefined, {
-      key: "VmeRTX7j-"
+      key: "VmeRTX7j-",
     });
 
     expect(result).toMatchSnapshot();
@@ -73,7 +73,7 @@ describe("formidadog-ql server", () => {
     `;
 
     const result = await graphql(schema(dogs), mutation, undefined, undefined, {
-      key: "VmeRTX7j-"
+      key: "VmeRTX7j-",
     });
 
     expect(result).toMatchSnapshot();
@@ -92,7 +92,7 @@ describe("formidadog-ql server", () => {
     const result = await graphql(schema(dogs), mutation);
 
     expect(result).toMatchSnapshot();
-    expect(result.data.likeAllDogs.every(dog => dog.likes > 0)).toBe(true);
+    expect(result.data.likeAllDogs.every((dog) => dog.likes > 0)).toBe(true);
   });
 
   it("executes the patDog mutation", async () => {
@@ -105,7 +105,7 @@ describe("formidadog-ql server", () => {
     `;
 
     const result = await graphql(schema(dogs), mutation, undefined, undefined, {
-      key: "VmeRTX7j-"
+      key: "VmeRTX7j-",
     });
 
     expect(result).toMatchSnapshot();
@@ -124,7 +124,7 @@ describe("formidadog-ql server", () => {
     const result = await graphql(schema(dogs), mutation);
 
     expect(result).toMatchSnapshot();
-    expect(result.data.patAllDogs.every(dog => dog.pats > 0)).toBe(true);
+    expect(result.data.patAllDogs.every((dog) => dog.pats > 0)).toBe(true);
   });
 
   it("executes the treatDog mutation", async () => {
@@ -137,7 +137,7 @@ describe("formidadog-ql server", () => {
     `;
 
     const result = await graphql(schema(dogs), mutation, undefined, undefined, {
-      key: "VmeRTX7j-"
+      key: "VmeRTX7j-",
     });
 
     expect(result).toMatchSnapshot();
@@ -156,7 +156,7 @@ describe("formidadog-ql server", () => {
     const result = await graphql(schema(dogs), mutation);
 
     expect(result).toMatchSnapshot();
-    expect(result.data.treatAllDogs.every(dog => dog.treats > 0)).toBe(true);
+    expect(result.data.treatAllDogs.every((dog) => dog.treats > 0)).toBe(true);
   });
 
   it("executes the bellyscratchDog mutation", async () => {
@@ -169,7 +169,7 @@ describe("formidadog-ql server", () => {
     `;
 
     const result = await graphql(schema(dogs), mutation, undefined, undefined, {
-      key: "VmeRTX7j-"
+      key: "VmeRTX7j-",
     });
 
     expect(result).toMatchSnapshot();
@@ -189,7 +189,7 @@ describe("formidadog-ql server", () => {
 
     expect(result).toMatchSnapshot();
     expect(
-      result.data.bellyscratchAllDogs.every(dog => dog.bellyscratches > 0)
+      result.data.bellyscratchAllDogs.every((dog) => dog.bellyscratches > 0)
     ).toBe(true);
   });
 });
