@@ -1,9 +1,15 @@
 {
-  "extends": [
-    "formidable/configurations/es6-node",
-    "plugin:prettier/recommended"
-  ],
+  "extends": ["eslint:recommended", "plugin:node/recommended", "prettier"],
   "env": {
     "jest": true
+  },
+  "parser": "babel-eslint",
+  "rules": {
+    "node/no-extraneous-require": [
+      "error",
+      {
+        "allowModules": ["@graphql-tools/schema"]
+      }
+    ]
   }
 }

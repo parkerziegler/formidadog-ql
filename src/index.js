@@ -1,18 +1,15 @@
 "use strict";
 
-const graphqlHttp = require("express-graphql");
 const express = require("express");
-const app = express();
-const cors = require("cors");
+const { graphqlHTTP } = require("express-graphql");
 const fetch = require("isomorphic-fetch");
+
 const { schema } = require("./schema");
-require("es6-promise").polyfill();
+
+const app = express();
 
 const start = async () => {
-  // make the req to RawGit for Formidable dogs
-  const res = await fetch(
-    "https://rawgit.com/FormidableLabs/dogs/master/dogs.json"
-  );
+  const res = await fetch("https://dogs.formidable.dev/dogs");
 
   const data = await res.json();
   const dogs = data.map((dog) => ({
@@ -23,20 +20,19 @@ const start = async () => {
     bellyscratches: 0,
   }));
 
-  app.use(cors());
-
   const PORT = 3001;
 
-  const initializedGraphQLMiddleware = graphqlHttp({
-    // GraphQL’s data schema
-    schema: schema(dogs),
-    // Pretty Print the JSON response
-    pretty: true,
-    // Enable GraphiQL dev tool
-    graphiql: true,
-  });
-
-  app.use(initializedGraphQLMiddleware);
+  app.use(
+    "/graphql",
+    graphqlHTTP({
+      // GraphQL’s data schema
+      schema: schema(dogs),
+      // Pretty Print the JSON response
+      pretty: true,
+      // Enable GraphiQL dev tool
+      graphiql: true,
+    })
+  );
 
   app.listen(PORT, () => {
     // eslint-disable-next-line no-console

@@ -1,6 +1,6 @@
 "use strict";
 
-const { makeExecutableSchema } = require("graphql-tools");
+const { makeExecutableSchema } = require("@graphql-tools/schema");
 const { incrementDogAttribute, incrementAll } = require("./helpers");
 
 const typeDefs = `
