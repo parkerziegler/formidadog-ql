@@ -1,9 +1,14 @@
-# use node_js as language flag
 language: node_js
 
-# use v8 to support async / await
 node_js:
-  - "8"
+  - "12"
+
+branches:
+  only:
+    - main
+
+install:
+  - yarn install --frozen-lockfile --non-interactive
 
 script:
   - yarn test

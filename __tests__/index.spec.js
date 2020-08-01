@@ -7,15 +7,13 @@ const { schema } = require("../src/schema");
 
 describe("formidadog-ql server", () => {
   /**
-   * Fetch dogs from the rawgit endpoint since our schema initalization
+   * Fetch dogs from dogs.formidable.dev since our schema initalization
    * requires that they be available at runtime. The JSON file is small
    * enough that it shouldn't impact test time too drastically.
    */
   let dogs;
   beforeAll(async () => {
-    const res = await fetch(
-      "https://rawgit.com/FormidableLabs/dogs/master/dogs.json"
-    );
+    const res = await fetch("https://dogs.formidable.dev/dogs");
     const data = await res.json();
     dogs = data.map((dog) => ({
       ...dog,
