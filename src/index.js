@@ -20,8 +20,6 @@ const start = async () => {
     bellyscratches: 0,
   }));
 
-  const PORT = 3001;
-
   app.use(
     "/graphql",
     graphqlHTTP({
@@ -33,6 +31,8 @@ const start = async () => {
       graphiql: true,
     })
   );
+
+  const PORT = process.env.PORT || 4000;
 
   app.listen(PORT, () => {
     // eslint-disable-next-line no-console
