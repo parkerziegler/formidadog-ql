@@ -2,7 +2,7 @@
 
 const { graphql } = require("graphql");
 const fetch = require("isomorphic-fetch");
-require("es6-promise").polyfill();
+
 const { schema } = require("../src/schema");
 
 describe("formidadog-ql server", () => {
