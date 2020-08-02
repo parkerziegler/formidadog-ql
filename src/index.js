@@ -3,6 +3,7 @@
 const express = require("express");
 const { graphqlHTTP } = require("express-graphql");
 const fetch = require("isomorphic-fetch");
+const cors = require("cors");
 
 const { schema } = require("./schema");
 
@@ -19,6 +20,8 @@ const start = async () => {
     treats: 0,
     bellyscratches: 0,
   }));
+
+  app.use(cors());
 
   app.use(
     "/graphql",
