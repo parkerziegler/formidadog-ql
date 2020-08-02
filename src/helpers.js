@@ -1,5 +1,24 @@
 "use strict";
 
+const fetch = require("isomorphic-fetch");
+require("dotenv").config();
+
+/**
+ * A function to persist data updates to our JSON bin.
+ * @param {*} dogs - the array of Formidable dogs.
+ */
+async function updateBin(dogs) {
+  await fetch(process.env.BIN_API, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+      "secret-key": process.env.BIN_SECRET_KEY,
+      versioning: false,
+    },
+    body: JSON.stringify(dogs, null, 2),
+  });
+}
+
 /**
  * A function to increment a specific attribute on a dog.
  * @param {string} attr - the attribute to increment, i.e. likes, treats, etc.
@@ -8,18 +27,25 @@
  *
  * @returns {object} - the updated record created by the mutation.
  */
-const incrementDogAttribute = function(attr, args, dogs) {
-  const dog = dogs.find(d => d.key === args.key || d.name === args.name);
+async function incrementDogAttribute(attr, args, dogs) {
+  const dog = dogs.find((d) => d.key === args.key || d.name === args.name);
   const idx = dogs.indexOf(dog);
 
   const update = {
     ...dog,
-    [attr]: dog[attr] + 1
+    [attr]: dog[attr] + 1,
   };
 
   dogs.splice(idx, 1, update);
-  return update;
-};
+
+  try {
+    await updateBin(dogs);
+
+    return update;
+  } catch (err) {
+    throw new Error(err);
+  }
+}
 
 /**
  * A function to increment a specific attribute for all dogs.
@@ -28,15 +54,21 @@ const incrementDogAttribute = function(attr, args, dogs) {
  *
  * @returns {array} - the updated array of dogs created by the mutation.
  */
-const incrementAll = function(attr, dogs) {
-  dogs.forEach(dog => {
+async function incrementAll(attr, dogs) {
+  dogs.forEach((dog) => {
     dog[attr] += 1;
   });
 
-  return dogs;
-};
+  try {
+    await updateBin(dogs);
+
+    return dogs;
+  } catch (err) {
+    throw new Error(err);
+  }
+}
 
 module.exports = {
   incrementDogAttribute,
-  incrementAll
+  incrementAll,
 };

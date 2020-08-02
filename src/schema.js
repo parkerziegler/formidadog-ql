@@ -1,6 +1,7 @@
 "use strict";
 
 const { makeExecutableSchema } = require("@graphql-tools/schema");
+
 const { incrementDogAttribute, incrementAll } = require("./helpers");
 
 const typeDefs = `
@@ -41,15 +42,17 @@ const resolvers = (dogs) => ({
       dogs.find((d) => d.key === args.key || d.name === args.name),
   },
   Mutation: {
-    likeDog: (_, args) => incrementDogAttribute("likes", args, dogs),
-    likeAllDogs: () => incrementAll("likes", dogs),
-    patDog: (_, args) => incrementDogAttribute("pats", args, dogs),
-    patAllDogs: () => incrementAll("pats", dogs),
-    treatDog: (_, args) => incrementDogAttribute("treats", args, dogs),
-    treatAllDogs: () => incrementAll("treats", dogs),
-    bellyscratchDog: (_, args) =>
-      incrementDogAttribute("bellyscratches", args, dogs),
-    bellyscratchAllDogs: () => incrementAll("bellyscratches", dogs),
+    likeDog: async (_, args) =>
+      await incrementDogAttribute("likes", args, dogs),
+    likeAllDogs: async () => await incrementAll("likes", dogs),
+    patDog: async (_, args) => await incrementDogAttribute("pats", args, dogs),
+    patAllDogs: async () => await incrementAll("pats", dogs),
+    treatDog: async (_, args) =>
+      await incrementDogAttribute("treats", args, dogs),
+    treatAllDogs: async () => await incrementAll("treats", dogs),
+    bellyscratchDog: async (_, args) =>
+      await incrementDogAttribute("bellyscratches", args, dogs),
+    bellyscratchAllDogs: async () => await incrementAll("bellyscratches", dogs),
   },
 });
 
