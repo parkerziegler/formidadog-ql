@@ -1,17 +1,16 @@
 language: node_js
-
 node_js:
-  - "12"
-
+- '12'
 branches:
   only:
-    - main
-
+  - main
 install:
-  - yarn install --frozen-lockfile --non-interactive
-
+- yarn install --frozen-lockfile --non-interactive
 script:
-  - yarn test
-  - yarn coverage
-  # Upload to coveralls, but don't _fail_ if coveralls is down.
-  - cat coverage/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"
+- yarn test
+- yarn coverage
+- cat coverage/lcov.info | node_modules/.bin/coveralls || echo "Coveralls upload failed"
+env:
+  global:
+  - secure: f/EUw7wHZIe9y0AsJCcLIxpVhHtDnkc/J1lLrLcZ6js2oUmGPNlQvY6s/3QvJt+nIhJnDSTLP+CBF1h2G1PFuvSQBB565cllUAIG3++2BLWCd0sfzM42lZXWgQQ7CZdw4YEwbqMQNt0KTjPkK6qFjdcXXoCwokWBnMLbXT/FKojGK4MifnQY2u2/YB6ma7HDQyf3vT849HMYe3vpi1kPVx1i2E1Y2UaGlN3O7Vlwlaqbd/s8PTe9Pi7Ud03Ge9ZJc28Cw8UOZ/EXIIAe0czO+rC3ttLN3YvHcdaPMLhZ/UEE0Sm9xzz8gJE9QCuAq/whVszTN6RYUDWggQeAPO42H/62Tc50zc0OQokQ0Sbdi3ZPyZRmCtAKU3w2kYfJN6TLKSrjjUZ/EO7ELfd9R8epq4j03DvK5zsovUyLfidpUxYVeaaIyLMXgvSx9dUfzEU1ErXN0rB65R/MPOnYi9Wk142qdyKmz+cli3ARaq3UAs6kFBTWko+bh/oCvSYTG78n1/OPYD+X48tT4qOphB3h69vX5TctmhV4SH0HPYWW9/cqQGHgafIXY5OQS9nZI0LznPVKS/DiafcRvRgVNPLa3/MTt1p27W/OeDaWdBZu+VQyMwIoBfirfWjXjK6Ig7auQzmI5WuwuOR/OXjPYsc7Uzz0so86/l3BXWgoZRWsj0M=
+  - secure: kkHgxYV3mC4WJFihzFxBLk5oM61mPr21YGa/61q3It5cLZu06xN427iuoYarTKQ8xMfrxJcHdEziPGYUiRbGh23/ygoj0AiessaCR9vqlKdXfE8hB1wScdCpoPc/hTaQACOFxYWrp2ndVrMuHg8V+XP7JskUmal6I3GbGZY+/Pjl9XuSPc9IzsXGwjD7OrqrZj9VoFJ61CaBMr/LQb92mBKvTz1PcIO3DrQUuDx/VLMR6uS+DESNycnk/HDdZJmUf/8sS9ELF1G8L3msLowiyKmSPZXCAHn6Vjirs69PD2vN9usy/sw/sviVOBd8te7KCy6Ch7Hrza71CeQSlVK8kE9fZ0TcOsKd4v+zKWb7R3CbK/ZJg85BZg7AewZ/GM32chUYVXCHmB2veWHdc5V0NcBUAtLuoU/dmb0+Tj4+kj0fVbEyQK3T/lQ7vUSJYYm/HLe8SWrlHvdYaPH4J9Fi+xbWGrQG4gdNtQunbgdB7l8x4Czt25V1FpBGCcaH0CVB9Do9vnGYWT9CLy+1Au0STKAEb0IOoLLM74lV6jXNejVy5IHMyU1WgvOGVEWl/Np0i/651ZvgRRO9J7MvJqGiVhi5yuKV38h932lHHviPj5yWcpLu2OeaMHEFvJJvu7FnU3zbffnY9vDLINOCA5BempeUhwzZ1vjCtLCu/zsrZ3U=

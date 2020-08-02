@@ -2,6 +2,7 @@
 
 const { graphql } = require("graphql");
 const fetch = require("isomorphic-fetch");
+require("dotenv").config();
 
 const { schema } = require("../src/schema");
 
