@@ -1,6 +1,6 @@
 # 🐶 formidadog-ql 🐶
 
-A dead simple GraphQL API of 🐶 [@FormidableLabs](https://github.com/FormidableLabs). See the demo [here](https://formidadog-ql.now.sh/graphql).
+A dead simple GraphQL API of 🐶 [@FormidableLabs](https://github.com/FormidableLabs). See the demo [here](https://formidadog-ql.herokuapp.com/graphql).
 
 [![Build Status](https://travis-ci.org/parkerziegler/formidadog-ql.svg?branch=main)](https://travis-ci.org/parkerziegler/formidadog-ql)
 [![Coverage Status](https://coveralls.io/repos/github/parkerziegler/formidadog-ql/badge.svg?branch=main)](https://coveralls.io/github/parkerziegler/formidadog-ql?branch=main)
@@ -20,17 +20,17 @@ yarn
 yarn start
 ```
 
-This will start the server up at `localhost:3001`. Go ahead and change the port in `src/index.js` if you like. We figured you might be using `localhost:3000` already 😉.
+This will start the server up at `localhost:4000`. Go ahead and change the port in `src/index.js` if you like. We figured you might be using `localhost:3000` already 😉.
 
-**Note: Running this app locally requires Node 8. We make use of `async`/`await` for startup, so make sure you're using Node 8 or above. Using [LTS](https://nodejs.org/en/) is recommended.**
+**Note: Running this app locally requires Node >= 8. We make use of `async`/`await` for startup, so make sure you're using Node 8 or above. Using [LTS](https://nodejs.org/en/) is recommended.**
 
 ## What Next?
 
-Once you have the server running, go to `localhost:3001` in your browser. You'll get an awesome [GraphiQL](https://github.com/graphql/graphiql) interface for writing `queries`, `mutations`, and exploring the `schema`.
+Once you have the server running, go to `localhost:4000/graphql` in your browser. You'll get an awesome [GraphiQL](https://github.com/graphql/graphiql) interface for writing `queries`, `mutations`, and exploring the `schema`.
 
 ![formidadog-ql-demo](/static/formidadog-ql.gif)
 
-As long as you have the server running, you can hit `localhost:3001` from any local app to use this API.
+As long as you have the server running, you can hit `localhost:4000/graphql` from any local app to use this API.
 
 ### Write a Simple Query
 
