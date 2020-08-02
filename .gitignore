@@ -5,5 +5,5 @@ package-lock.json
 package-lock.json.*
 coverage
 .env
-# Local Netlify folder
 .netlify
+built-lambda

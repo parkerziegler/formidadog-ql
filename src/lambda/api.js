@@ -6,7 +6,7 @@ const fetch = require("isomorphic-fetch");
 const cors = require("cors");
 require("dotenv").config();
 
-const { schema } = require("../src/schema");
+const { schema } = require("../schema");
 
 const app = express();
 app.use(cors());
