@@ -8,7 +8,6 @@ const cors = require("cors");
 const { schema } = require("./schema");
 
 const app = express();
-app.use(cors());
 
 const start = async () => {
   const res = await fetch("https://dogs.formidable.dev/dogs");
@@ -22,8 +21,9 @@ const start = async () => {
     bellyscratches: 0,
   }));
 
+  app.use(cors());
+
   app.use(
-    "/graphql",
     graphqlHTTP({
       // GraphQL’s data schema
       schema: schema(dogs),
