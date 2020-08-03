@@ -1,10 +1,10 @@
 # 🐶 formidadog-ql 🐶
 
-A dead simple GraphQL API of 🐶 [@FormidableLabs](https://github.com/FormidableLabs). See the demo [here](https://formidadoq-ql.netlify.app/graphql).
+A dead simple GraphQL API of 🐶 [@FormidableLabs](https://github.com/FormidableLabs). See the demo [here](https://formidadog-ql.netlify.app/graphql).
 
 [![Build Status](https://travis-ci.org/parkerziegler/formidadog-ql.svg?branch=main)](https://travis-ci.org/parkerziegler/formidadog-ql)
 [![Coverage Status](https://coveralls.io/repos/github/parkerziegler/formidadog-ql/badge.svg?branch=main)](https://coveralls.io/github/parkerziegler/formidadog-ql?branch=main)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/5aec3c09-b015-4f41-bb98-0d3587fa431a/deploy-status)](https://app.netlify.com/sites/formidadoq-ql/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/5aec3c09-b015-4f41-bb98-0d3587fa431a/deploy-status)](https://app.netlify.com/sites/formidadog-ql/deploys)
 
 ## What's This About
 
